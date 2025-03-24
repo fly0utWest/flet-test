@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router";
 import { Routes, Route } from "react-router";
 import { QueryClient } from "@tanstack/react-query";
 import { QueryClientProvider } from "@tanstack/react-query";
+import PostPage from "./pages/PostPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Dashboard />}></Route>
+            <Route path="/post/:slug" element={<PostPage />}></Route>
           </Routes>
         </BrowserRouter>
       </main>

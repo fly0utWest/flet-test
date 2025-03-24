@@ -1,5 +1,5 @@
 const jsonLoader = async (endpoint: string) => {
-  const API_URL = "https://jsonplaceholder.typicode.com/";
+  const API_URL = "https://jsonplaceholder.typicode.com";
 
   const response = await fetch(`${API_URL}/${endpoint}`);
 
