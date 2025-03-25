@@ -1,36 +1,33 @@
 @import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 263.4 70% 50.4%;
-    --primary-foreground: 210 20% 98%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 263.4 70% 50.4%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-  }
+@theme {
+  --color-background: oklch(0.145 0 271.2deg);
+  --color-foreground: oklch(0.985 0 271.2deg);
+  --color-card: oklch(0.145 0 271.2deg);
+  --color-card-foreground: oklch(0.985 0 271.2deg);
+  --color-popover: oklch(0.145 0 271.2deg);
+  --color-popover-foreground: oklch(0.985 0 271.2deg);
+  --color-primary: oklch(0.491 0.241 292.6deg);
+  --color-primary-foreground: oklch(0.985 0.002 249.2deg);
+  --color-secondary: oklch(0.269 0 271.2deg);
+  --color-secondary-foreground: oklch(0.985 0 271.2deg);
+  --color-muted: oklch(0.269 0 271.2deg);
+  --color-muted-foreground: oklch(0.715 0 271.2deg);
+  --color-accent: oklch(0.269 0 271.2deg);
+  --color-accent-foreground: oklch(0.985 0 271.2deg);
+  --color-destructive: oklch(0.396 0.133 25.7deg);
+  --color-destructive-foreground: oklch(0.985 0 271.2deg);
+  --color-border: oklch(0.269 0 271.2deg);
+  --color-input: oklch(0.269 0 271.2deg);
+  --color-ring: oklch(0.491 0.241 292.6deg);
+  --color-chart-1: oklch(0.53 0.193 262.1deg);
+  --color-chart-2: oklch(0.699 0.134 165.5deg);
+  --color-chart-3: oklch(0.723 0.15 60.6deg);
+  --color-chart-4: oklch(0.619 0.203 312.7deg);
+  --color-chart-5: oklch(0.612 0.209 6.1deg);
 }
-
 :root {
-  color: hsl(var(--foreground));
+  color: ---color-foreground;
   width: 100%;
   height: 100vh;
 }
@@ -42,5 +39,5 @@ body,
 }
 
 body {
-  background-color: hsl(var(--background));
+  background-color: --color-background;
 }

@@ -36,7 +36,7 @@ function Dashboard() {
         {isLoading && <Loading />}
 
         {isError && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <div className="bg-red-100 border border-destructive text-destructive px-4 py-3 rounded">
             <p>
               Ошибка при загрузке данных:{" "}
               {(error as Error)?.message || "Неизвестная ошибка"}
@@ -45,7 +45,7 @@ function Dashboard() {
         )}
 
         {posts && posts.length === 0 && !isLoading && (
-          <div className="text-center py-8 text-gray-500">Посты не найдены</div>
+          <div className="text-center py-8 text">Посты не найдены</div>
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -57,9 +57,9 @@ function Dashboard() {
         {hasMorePosts && (
           <button
             onClick={handleShowMore}
-            className="px-6 py-2 cursor-pointer bg-violet-500 text-white rounded-lg hover:bg-violet-600 transition-colors"
+            className="px-6 py-2 cursor-pointer bg-primary text-white rounded-lg hover:bg-violet-600 transition-colors"
           >
-            Показать еще
+            Show all
           </button>
         )}
       </section>

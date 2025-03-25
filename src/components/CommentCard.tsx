@@ -1,4 +1,3 @@
-import React from "react";
 import { Comment } from "../types";
 
 interface CommentCardProps {
@@ -7,7 +6,7 @@ interface CommentCardProps {
 
 const CommentCard = ({ comment }: CommentCardProps) => {
   return (
-    <article>
+    <article className="p-3 border-2 border-border rounded-lg shadow hover:shadow-md transition-shadow">
       <h3>
         {comment.name} <span>({comment.email})</span>
       </h3>

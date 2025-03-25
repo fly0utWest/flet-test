@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <main className="p-4 w-full min-h-full max-w-screen-lg mx-auto flex flex-col items-center border-x-pr md:border-x-2">
+      <main className="p-4 w-full min-h-full max-w-screen-lg mx-auto flex flex-col items-center border-border md:border-x-2">
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Dashboard />}></Route>

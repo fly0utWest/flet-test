@@ -1,4 +1,3 @@
-import React from "react";
 import { Post } from "../types";
 import { Link } from "react-router";
 
@@ -11,19 +10,19 @@ const PostCard = ({ post, isSingle = false }: PostCardProps) => {
   return (
     <article
       key={post.id}
-      className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border border-gray-200"
+      className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow border"
     >
-      <h3 className="text-lg font-medium text-gray-900 mb-2">{post.title}</h3>
-      <p className="text-gray-600 line-clamp-3">{post.body}</p>
+      <h3 className="text-lg font-medium text-secondary mb-2">{post.title}</h3>
+      <p className="text-secondary600 line-clamp-3">{post.body}</p>
       <div className="mt-4 flex justify-between items-center">
         {!isSingle && (
           <>
-            <span className="text-sm text-gray-500">Пост #{post.id}</span>
+            <span className="text-sm text-secondary500">Post #{post.id}</span>
             <Link
               to={`/post/${post.id}`}
-              className="px-3 py-1 bg-violet-100 text-violet-700 rounded-full text-sm hover:bg-violet-200 transition-colors"
+              className="px-3 py-1 bg-violet-100 text-primary rounded-full text-sm hover:bg-violet-200 transition-colors"
             >
-              Комментарии
+              Comments
             </Link>
           </>
         )}

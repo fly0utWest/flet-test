@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router";
 import jsonLoader from "../utils/jsonLoader";
 import PostCard from "../components/PostCard";
@@ -45,7 +45,7 @@ const PostPage = () => {
       {isPostLoading && <Loading />}
 
       {isPostLoadingFailed && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+        <div className="bg-red-100 border border-destructive text-destructive px-4 py-3 rounded">
           <p>Error loading post</p>
         </div>
       )}
@@ -59,18 +59,20 @@ const PostPage = () => {
 
         {areCommentsLoading && !isPostLoading && (
           <div className="flex justify-center items-center py-4">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-violet-500"></div>
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
           </div>
         )}
 
         {isCommentsLoadingFailed && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+          <div className="bg-red-100 border border-destructive text-destructive px-4 py-3 rounded">
             <p>Error loading comments</p>
           </div>
         )}
 
         {comments && comments.length === 0 && (
-          <div className="text-center py-4 text-gray-500">No comments yet</div>
+          <div className="text-center py-4 text-secondary500">
+            No comments yet
+          </div>
         )}
 
         <div className="space-y-4">
@@ -82,7 +84,7 @@ const PostPage = () => {
         {hasMoreComments && (
           <button
             onClick={handleShowMore}
-            className="px-6 py-2 bg-violet-500 text-white rounded-lg hover:bg-violet-600 transition-colors"
+            className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-violet-600 transition-colors"
           >
             Show more comment
           </button>
