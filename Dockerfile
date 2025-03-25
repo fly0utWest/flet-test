@@ -14,6 +14,6 @@ FROM joseluisq/static-web-server:latest
 
 COPY --from=build /app/build /public
 
-EXPOSE 8080
+EXPOSE 5173
 
 CMD ["static-web-server"]
