@@ -10,10 +10,12 @@ COPY . .
 
 RUN npm run build
 
-FROM joseluisq/static-web-server:latest
+FROM nginx:alpine
 
-COPY --from=build /app/build /public
+COPY --from=build /app/build /usr/share/nginx/html
 
-EXPOSE 5173
+# Expose port 80 to the outside world
+EXPOSE 80
 
-CMD ["static-web-server"]
+# Start Nginx when the container launches
+CMD ["nginx", "-g", "daemon off;"]
